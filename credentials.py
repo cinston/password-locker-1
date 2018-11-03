@@ -2,6 +2,7 @@ class Credentials:
     """
       Class that creates instances of credentials.
     """
+    cred_list = []
 
     def __init__(self, username, password):
         """
@@ -13,3 +14,9 @@ class Credentials:
         """
         self.username = username
         self.password = password
+
+    def save_cred(self):
+        """
+          Method that stores objects into cred_list.
+        """
+        self.cred_list.append(self)
