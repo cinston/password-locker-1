@@ -1,5 +1,6 @@
 from unittest import TestCase, main
 from credentials import Credentials
+import pyperclip
 
 
 class TestCredentials(TestCase):
@@ -50,6 +51,14 @@ class TestCredentials(TestCase):
           Test case to check if the credentials can be displayed.
         """
         self.assertEqual(Credentials.display_cred(), Credentials.cred_list)
+
+    def test_copy_cred(self):
+        """
+          Test to check if credentials are copied to clipboard.
+        """
+        self.new_cred.save_cred()
+        Credentials.copy_cred('sam10105')
+        self.assertEqual(pyperclip.paste(), self.new_cred.username)
 
 
 if __name__ == '__main__':
