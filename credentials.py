@@ -20,3 +20,10 @@ class Credentials:
           Method that stores objects into cred_list.
         """
         self.cred_list.append(self)
+
+    @classmethod
+    def display_cred(cls):
+        """
+          Method that returns the cred_list list
+        """
+        return cls.cred_list
