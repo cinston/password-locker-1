@@ -16,6 +16,12 @@ class TestCredentials(TestCase):
         """
         self.new_cred = Credentials('sam10105', 'samisbae')
 
+    def tearDown(self):
+        """
+          Method that does clean up after each test has run.
+        """
+        Credentials.cred_list = []
+
     def test_init(self):
         """
           Test case to see if the objects are being initialized properly.
@@ -29,6 +35,15 @@ class TestCredentials(TestCase):
         """
         self.new_cred.save_cred()
         self.assertEqual(len(Credentials.cred_list), 1)
+
+    def test_store_multiple_cred(self):
+        """
+          Test case to check whether multiple credentials can be stored in cred_list.
+        """
+        self.new_cred.save_cred()
+        test_cred = Credentials('samE', 'sam123FTW')
+        test_cred.save_cred()
+        self.assertEqual(len(Credentials.cred_list), 2)
 
 
 if __name__ == '__main__':
