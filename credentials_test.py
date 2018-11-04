@@ -15,7 +15,7 @@ class TestCredentials(TestCase):
         """
           Method that runs before the test cases.
         """
-        self.new_cred = Credentials('sam10105', 'samisbae')
+        self.new_cred = Credentials('twitter','sam10105', 'samisbae')
 
     def tearDown(self):
         """
@@ -27,6 +27,7 @@ class TestCredentials(TestCase):
         """
           Test case to see if the objects are being initialized properly.
         """
+        self.assertEqual(self.new_cred.account_name, 'twitter')
         self.assertEqual(self.new_cred.username, 'sam10105')
         self.assertEqual(self.new_cred.password, 'samisbae')
 
@@ -42,7 +43,7 @@ class TestCredentials(TestCase):
           Test case to check whether multiple credentials can be stored in cred_list.
         """
         self.new_cred.save_cred()
-        test_cred = Credentials('samE', 'sam123FTW')
+        test_cred = Credentials('facebook','samE', 'sam123FTW')
         test_cred.save_cred()
         self.assertEqual(len(Credentials.cred_list), 2)
 
