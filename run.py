@@ -123,7 +123,7 @@ def main():
                     logged_in = login_user()
                     if logged_in and Credentials.cred_list:
                         print("\033c")
-                        print("The following is a list of all your accounts")
+                        print("Here is a list of all your accounts")
                         print("\n")
 
                         for account in display_credentials():
