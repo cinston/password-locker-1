@@ -10,8 +10,6 @@
 
 This is an app that allows one to create and store multiple credentials for their online accounts.
 
-## Behaviour Driven Development
-
 ## Setup/Installation Requirements
 
 - `git clone https://github.com/sam10105/password-locker.git`
