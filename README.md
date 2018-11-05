@@ -18,6 +18,49 @@ This is an app that allows one to create and store multiple credentials for thei
 - `cd password-locker`
 - `./run.py` (to run the application on the terminal)
 
+## Behavior Driven Development
+* The program should ask for user's username and password when **login** is entered:
+
+     **Input Example**: Enter **login**
+
+     **Output Example**: Enter your username
+
+     **Output Example**: Enter your password
+
+* The program should create a new user when **register** is entered:
+
+     **Input Example**: Enter **register**
+
+     **Output Example**: Enter your first name
+
+     **Output Example**: Enter your last name
+
+* The program should save existing credentials when  **save** is entered:
+
+     **Input Example**: Enter **save**
+
+     **Output Example**: Enter your username
+
+     **Output Example**: Successfully added!
+
+* The program should create new credentials when **new** is entered:
+
+     **Input Example**: Enter **new**
+
+     **Output Example**: Enter the account name
+
+* The program should display the credentials when **display** is entered:
+
+     **Input Example**: Enter **display**
+
+     **Output Example**: Here is a list of all of your accounts
+
+* The program should end when **exit** is entered:
+
+     **Input Example**: Enter **exit**
+
+     **Output Example**: Thank you for using Password Locker. Goodbye.
+
 ### License
 
 Copyright (c) 2018 **Sam Kasyoki**
